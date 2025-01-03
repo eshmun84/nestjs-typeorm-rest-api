@@ -6,10 +6,16 @@ export class Permission {
   private readonly _updatedAt?: Date | undefined;
   private readonly _deletedAt?: Date | undefined;
 
-
-  constructor(id: number = undefined, name: string, description: string, createdAt: Date = undefined, updatedAt: Date = undefined, deletedAt: Date = undefined) {
+  constructor(
+    id: number = undefined,
+    name: string,
+    description: string,
+    createdAt: Date = undefined,
+    updatedAt: Date = undefined,
+    deletedAt: Date = undefined,
+  ) {
     if (name.trim().length === 0) {
-      throw new Error("Missing name");
+      throw new Error('Missing name');
     }
 
     this._id = id || null;

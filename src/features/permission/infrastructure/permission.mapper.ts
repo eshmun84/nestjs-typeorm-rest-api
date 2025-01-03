@@ -1,6 +1,6 @@
-import { PermissionEntity } from "../../database";
-import { Permission } from "./entities";
-import { ResponsePermissionDto } from "./dto/response-permission.dto";
+import { PermissionEntity } from '../../../database';
+import { Permission } from '../domain';
+import { ResponsePermissionDto } from '../application/dto/response-permission.dto';
 
 export default class PermissionMapper {
   public static toDomain(entity: PermissionEntity): Permission {
@@ -25,7 +25,7 @@ export default class PermissionMapper {
     return entity;
   }
 
-  public static toDto(permission: Permission): ResponsePermissionDto{
+  public static toDto(permission: Permission): ResponsePermissionDto {
     return {
       id: permission.id,
       name: permission.name,
@@ -33,6 +33,6 @@ export default class PermissionMapper {
       createdAt: permission.createdAt,
       updatedAt: permission.updatedAt,
       deletedAt: permission.deletedAt,
-    }
+    };
   }
 }

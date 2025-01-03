@@ -34,7 +34,7 @@ export class HttpExceptionFilter implements ExceptionFilter {
         code: statusCode,
         path: httpAdapter.getRequestUrl(ctx.getRequest()),
         method: request.method,
-        data: message,
+        message: message,
       },
       statusCode,
     );

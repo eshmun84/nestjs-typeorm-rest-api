@@ -1,12 +1,11 @@
-import { UpdateResult } from 'typeorm';
-import { Permission } from "./entities";
+import { Permission } from './entities';
 
 export interface IPermissionRepository {
-  create(permission: Permission): Promise<Permission>;
+  create(_permission: Permission): Promise<Permission>;
   findAll(): Promise<Permission[] | null>;
-  findOneById(id: number, withDeleted: boolean): Promise<Permission | null>;
-  findOneByName(name: string): Promise<Permission | null>;
-  update(permission: Permission): Promise<Permission>;
-  remove(id: number): Promise<boolean>;
-  restore(id: number): Promise<boolean>;
+  findOneById(_id: number, _withDeleted: boolean): Promise<Permission | null>;
+  findOneByName(_name: string): Promise<Permission | null>;
+  update(_permission: Permission): Promise<Permission>;
+  remove(_id: number): Promise<void>;
+  restore(_id: number): Promise<void>;
 }

@@ -1,2 +1,2 @@
 export * from './dto';
-export * from './permission.service';
+export * from './use-cases';

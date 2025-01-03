@@ -25,9 +25,6 @@ export class PermissionEntity {
   @ManyToMany(() => UserEntity, (user) => user.permissions)
   users: UserEntity[];
 
-  @Column({ name: 'active', type: 'boolean', default: true })
-  public active: boolean;
-
   @CreateDateColumn({ name: 'created_at' })
   createdAt!: Date;
 

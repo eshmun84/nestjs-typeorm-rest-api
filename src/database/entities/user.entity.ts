@@ -38,9 +38,6 @@ export class UserEntity {
   @Column({ name: 'address', type: 'varchar' })
   public address: string;
 
-  @Column({ name: 'active', type: 'boolean', default: true })
-  public active: boolean;
-
   @ManyToMany(() => PermissionEntity, (permission) => permission.users)
   @JoinTable({
     name: 'user_permissions',
